@@ -119,9 +119,9 @@ export default function AllNotificationsPage() {
             onChange={(e) => { setFilterType(e.target.value); setPage(1); }}
           >
             <MenuItem value="">All Types</MenuItem>
-            <MenuItem value="Placement">📋 Placement</MenuItem>
-            <MenuItem value="Result">📊 Result</MenuItem>
-            <MenuItem value="Event">🎉 Event</MenuItem>
+            <MenuItem value="Placement">Placement</MenuItem>
+            <MenuItem value="Result">Result</MenuItem>
+            <MenuItem value="Event">Event</MenuItem>
           </Select>
         </FormControl>
       </Box>

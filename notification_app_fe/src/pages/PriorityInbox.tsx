@@ -118,9 +118,9 @@ export default function PriorityInboxPage() {
             onChange={(e) => setFilterType(e.target.value)}
           >
             <MenuItem value="">All Types</MenuItem>
-            <MenuItem value="Placement">📋 Placement</MenuItem>
-            <MenuItem value="Result">📊 Result</MenuItem>
-            <MenuItem value="Event">🎉 Event</MenuItem>
+            <MenuItem value="Placement">Placement</MenuItem>
+            <MenuItem value="Result">Result</MenuItem>
+            <MenuItem value="Event">Event</MenuItem>
           </Select>
         </FormControl>
 

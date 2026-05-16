@@ -1,0 +1,13 @@
+{
+  "name": "afford-logging-middleware",
+  "version": "1.0.0",
+  "description": "A reusable logging middleware for Affordmed assignment",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

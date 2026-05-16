@@ -6,8 +6,9 @@ import {
 import EventIcon from '@mui/icons-material/Event';
 import AssuredWorkloadIcon from '@mui/icons-material/AssuredWorkload';
 import SchoolIcon from '@mui/icons-material/School';
-import { fetchNotifications, Notification } from '../utils/api';
-import { Log } from 'afford-logging-middleware';
+import { fetchNotifications } from '../utils/api';
+import type { Notification } from '../utils/api';
+import * as Logger from 'afford-logging-middleware';
 
 export default function PriorityNotifications() {
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -25,7 +26,7 @@ export default function PriorityNotifications() {
 
   useEffect(() => {
     loadData();
-    Log("frontend", "info", "App", `Loaded Priority Inbox with limit ${limit}`);
+    Logger.Log("frontend", "info", "App", `Loaded Priority Inbox with limit ${limit}`);
   }, [limit, filterType]);
 
   const loadData = async () => {
@@ -49,7 +50,7 @@ export default function PriorityNotifications() {
 
       setNotifications(data);
     } catch (error) {
-      Log("frontend", "error", "App", "Failed to fetch priority notifications");
+      Logger.Log("frontend", "error", "App", "Failed to fetch priority notifications");
     } finally {
       setLoading(false);
     }

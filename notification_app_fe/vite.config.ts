@@ -6,5 +6,12 @@ export default defineConfig({
   server: {
     port: 3000,
     strictPort: true,
+    proxy: {
+      '/eval-api': {
+        target: 'http://4.224.186.213',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/eval-api/, '/evaluation-service'),
+      },
+    },
   },
 })

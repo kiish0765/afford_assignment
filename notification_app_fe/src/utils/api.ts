@@ -1,11 +1,12 @@
+// Requests go through the Vite dev proxy to avoid CORS issues
+const BASE_URL = '/eval-api';
+
 export interface Notification {
   ID: string;
   Type: "Placement" | "Result" | "Event";
   Message: string;
   Timestamp: string;
 }
-
-const BASE_URL = "http://4.224.186.213/evaluation-service";
 
 const AUTH_PAYLOAD = {
   email: "kishoredhayanithi620@gmail.com",

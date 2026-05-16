@@ -5,7 +5,8 @@ type StackType = "backend" | "frontend";
 type LevelType = "debug" | "info" | "warn" | "error" | "fatal";
 type PackageType = "cache" | "controller" | "cron_job" | "db" | "domain" | string;
 
-const TEST_SERVER_BASE_URL = "http://4.224.186.213/evaluation-service";
+// Requests go through the Vite dev proxy to avoid CORS
+const TEST_SERVER_BASE_URL = '/eval-api';
 
 const AUTH_PAYLOAD = {
   email: "kishoredhayanithi620@gmail.com",

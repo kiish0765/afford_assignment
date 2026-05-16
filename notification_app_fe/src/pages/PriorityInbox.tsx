@@ -39,9 +39,9 @@ export default function PriorityInboxPage() {
     try {
       await Log("frontend", "info", "controller", `Loading Priority Inbox: top ${topN}, type=${filterType || "all"}`);
 
-      // Fetch enough to sort and slice
+      // Fetch from API (limit=10 is the safe max the server accepts)
       const data = await fetchNotifications({
-        limit: 50,
+        limit: 10,
         page: 1,
         notification_type: filterType || undefined,
       });
